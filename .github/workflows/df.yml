@@ -6,7 +6,7 @@ on:
 jobs:
     echo_nproc:
         name: Show system info
-        runs-on: ubuntu-22.04
+        runs-on: debian-latest
         steps:
           - name: Maximize build space
             uses: easimon/maximize-build-space@master
