@@ -1,0 +1,11 @@
+name: Echo nproc
+
+on:
+	workflow_dispatch:
+
+jobs:
+	echo_nproc:
+		name: Echo nproc
+		runs-on: ubuntu-24.04
+		steps:
+		  - run: echo $(nproc)
