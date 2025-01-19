@@ -8,6 +8,13 @@ jobs:
         name: Show system info
         runs-on: ubuntu-24.04
         steps:
+          - name: Maximize build space
+            uses: easimon/maximize-build-space@master
+            with:
+                remove-dotnet: 'true'
+                remove-haskell: 'true'
+                remove-codeql: 'true'
+                remove-docker-images: 'true'
           - run: echo $(df -h)
           - run: cat /proc/cpuinfo
           - run: cat /proc/meminfo
